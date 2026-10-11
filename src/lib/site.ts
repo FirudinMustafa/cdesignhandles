@@ -1,6 +1,6 @@
 import catalog from "./catalog.generated.json";
 
-// İletişim bilgileri C-Design'ın üretici firması Alevsan ile ortak.
+// Telefon ve WhatsApp üretici firma Alevsan ile ortak; e-posta ve adres C-Design'a ait.
 export const company = {
   name: "C-Design Handles",
   maker: "Alevsan Torna Sanayi ve Ticaret Ltd. Şti.",
@@ -9,9 +9,9 @@ export const company = {
   phoneHref: "tel:+902164710006",
   whatsapp: "+90 535 637 37 37",
   whatsappHref: "https://wa.me/905356373737",
-  email: "alevsancncotomat@hotmail.com",
-  address: "Meclis Mah. Teraziler Cad. Perpim Sanayi Sitesi No:31/B-11, Sancaktepe / İstanbul",
-  mapQuery: "Perpim Sanayi Sitesi, Teraziler Cad., Meclis Mah., Sancaktepe, İstanbul",
+  email: "c-designhandles@hotmail.com",
+  address: "İMES Sanayi Sitesi C Blok 207. Sokak No:15/3, Ümraniye / İstanbul",
+  mapQuery: "İMES Sanayi Sitesi C Blok 207. Sokak 15, Ümraniye, İstanbul",
   siteUrl: "https://cdesignhandles.com",
 };
 
