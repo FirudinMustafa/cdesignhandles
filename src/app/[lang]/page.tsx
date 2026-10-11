@@ -89,7 +89,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
         <div className="grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {categorySlugs.map((slug, i) => (
             <Reveal key={slug} delay={(i % 3) * 0.12}>
-              <Link href={`${href(lang, "/collection")}#${slug}`} className="group block">
+              <Link href={`${href(lang, "/collection")}?category=${slug}`} className="group block">
                 <div className="relative aspect-[4/5] overflow-hidden bg-sand">
                   <Image
                     src={categoryImage[slug]}

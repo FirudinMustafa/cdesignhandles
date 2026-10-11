@@ -23,24 +23,23 @@ export function Gallery({
   const [viewIndex, setViewIndex] = useState<number | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
 
-  // Ana sayfadaki kategori kartları /collection#kulplar gibi gelir
+  // Ana sayfadaki kategori kartları /collection?category=kulplar gibi gelir.
+  // (#kulplar gibi hash kullanılmıyor: hedef id sayfada olmayınca Next yeni sayfayı yukarı kaydırmıyor.)
   useEffect(() => {
-    const fromHash = () => {
-      const slug = decodeURIComponent(location.hash.slice(1));
+    const fromUrl = () => {
+      const slug = new URLSearchParams(location.search).get("category") ?? "";
       if ((categorySlugs as readonly string[]).includes(slug)) {
         setFilter(slug as CategorySlug);
         setLimit(STEP);
       }
     };
-    fromHash();
-    window.addEventListener("hashchange", fromHash);
-    return () => window.removeEventListener("hashchange", fromHash);
+    fromUrl();
   }, []);
 
   const choose = (f: Filter) => {
     setFilter(f);
     setLimit(STEP);
-    history.replaceState(null, "", f === "all" ? location.pathname : `#${f}`);
+    history.replaceState(null, "", f === "all" ? location.pathname : `?category=${f}`);
   };
 
   const list = filter === "all" ? products : products.filter((p) => p.category === filter);

@@ -4,6 +4,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ScrollReset } from "@/components/ScrollReset";
 import { getDictionary, hasLocale, locales } from "@/lib/i18n";
 import { company } from "@/lib/site";
 
@@ -45,6 +46,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
     // yukarı kaydırılırken yarıda kalıyor ve footer'daki linkler sayfayı altta açıyor (Next 16 değişikliği)
     <html lang={lang} data-scroll-behavior="smooth" className={`${cormorant.variable} ${manrope.variable} antialiased`}>
       <body className="flex min-h-screen flex-col font-sans">
+        <ScrollReset />
         <Header locale={lang} t={t.nav} />
         <main className="flex-1">{children}</main>
         <Footer locale={lang} t={t} />
