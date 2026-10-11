@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
@@ -9,38 +10,37 @@ import { categorySlugs, type CategorySlug, type Product } from "@/lib/site";
 const STEP = 24;
 type Filter = "all" | CategorySlug;
 
-export function Gallery({
-  products,
-  t,
-  categories,
-}: {
+type Props = {
   products: Product[];
   t: Dictionary["collection"];
   categories: Dictionary["categories"];
-}) {
-  const [filter, setFilter] = useState<Filter>("all");
+};
+
+/**
+ * Seçili kategori adresteki ?category= parametresinden okunur, böylece ana sayfadaki kategori kartları,
+ * geri/ileri tuşları ve aynı sayfada adres değişimi hep doğru filtreyi gösterir.
+ * (#kulplar gibi hash kullanılmıyor: hedef id sayfada olmayınca Next yeni sayfayı yukarı kaydırmıyor.)
+ * useSearchParams statik sayfada Suspense ister; o sırada "Tümü" ile aynı galeri gösterilir (bkz. GalleryFallback).
+ */
+export function Gallery(props: Props) {
+  const param = useSearchParams().get("category") ?? "";
+  const filter: Filter = (categorySlugs as readonly string[]).includes(param) ? (param as CategorySlug) : "all";
+  // Next, history.replaceState'i useSearchParams ile senkronlar
+  const choose = (f: Filter) => history.replaceState(null, "", f === "all" ? location.pathname : `?category=${f}`);
+  // key: filtre değişince görünüm sıfırdan başlar (gösterilen görsel sayısı yeniden STEP olur)
+  return <GalleryView key={filter} {...props} filter={filter} onChoose={choose} />;
+}
+
+export function GalleryFallback(props: Props) {
+  return <GalleryView {...props} filter="all" onChoose={() => {}} />;
+}
+
+function GalleryView({ products, t, categories, filter, onChoose }: Props & { filter: Filter; onChoose: (f: Filter) => void }) {
   const [limit, setLimit] = useState(STEP);
   const [viewIndex, setViewIndex] = useState<number | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
 
-  // Ana sayfadaki kategori kartları /collection?category=kulplar gibi gelir.
-  // (#kulplar gibi hash kullanılmıyor: hedef id sayfada olmayınca Next yeni sayfayı yukarı kaydırmıyor.)
-  useEffect(() => {
-    const fromUrl = () => {
-      const slug = new URLSearchParams(location.search).get("category") ?? "";
-      if ((categorySlugs as readonly string[]).includes(slug)) {
-        setFilter(slug as CategorySlug);
-        setLimit(STEP);
-      }
-    };
-    fromUrl();
-  }, []);
-
-  const choose = (f: Filter) => {
-    setFilter(f);
-    setLimit(STEP);
-    history.replaceState(null, "", f === "all" ? location.pathname : `?category=${f}`);
-  };
+  const choose = (f: Filter) => onChoose(f);
 
   const list = filter === "all" ? products : products.filter((p) => p.category === filter);
   const shown = list.slice(0, limit);

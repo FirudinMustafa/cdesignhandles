@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { Gallery } from "@/components/Gallery";
+import { Suspense } from "react";
+import { Gallery, GalleryFallback } from "@/components/Gallery";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/ui";
 import { getDictionary, hasLocale, href } from "@/lib/i18n";
@@ -29,7 +30,9 @@ export default async function CollectionPage({ params }: PageProps<"/[lang]/coll
       <PageHero eyebrow={t.collection.eyebrow} title={t.collection.title} lead={t.collection.lead} image="/images/cat-kulplar.webp" />
 
       <section className="container-x py-20 sm:py-28">
-        <Gallery products={products} t={t.collection} categories={t.categories} />
+        <Suspense fallback={<GalleryFallback products={products} t={t.collection} categories={t.categories} />}>
+          <Gallery products={products} t={t.collection} categories={t.categories} />
+        </Suspense>
       </section>
 
       <section className="bg-sand">
