@@ -1,0 +1,466 @@
+[
+ {
+  "src": "/images/products/kulplar-01.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-1.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-02.webp",
+  "category": "kulplar",
+  "kind": "application",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-2.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-03.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-3.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-04.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-4.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-05.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-9.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-06.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-16.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-07.webp",
+  "category": "kulplar",
+  "kind": "application",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-27.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-08.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-28.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-09.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1536,
+  "height": 1024,
+  "source": "assets/image-35.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-10.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-39.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-11.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-40.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-12.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1086,
+  "height": 1448,
+  "source": "assets/image-43.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-13.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-45.jpeg"
+ },
+ {
+  "src": "/images/products/kulplar-14.webp",
+  "category": "kulplar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-58.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-01.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-5.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-02.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-11.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-03.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1402,
+  "height": 1122,
+  "source": "assets/image-12.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-04.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-13.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-05.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-17.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-06.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-20.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-07.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-21.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-08.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-25.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-09.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-26.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-10.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-29.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-11.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-30.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-12.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-32.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-13.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-33.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-14.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1448,
+  "height": 1086,
+  "source": "assets/image-38.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-15.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-41.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-16.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1190,
+  "height": 1322,
+  "source": "assets/image-46.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-17.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-47.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-18.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1374,
+  "height": 1145,
+  "source": "assets/image-50.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-19.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1122,
+  "height": 1402,
+  "source": "assets/image-51.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-20.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1190,
+  "height": 1322,
+  "source": "assets/image-54.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-21.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1190,
+  "height": 1322,
+  "source": "assets/image-62.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-22.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1320,
+  "height": 1228,
+  "source": "assets/image-69.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-23.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1320,
+  "height": 1111,
+  "source": "assets/image-72.jpeg"
+ },
+ {
+  "src": "/images/products/topuzlar-24.webp",
+  "category": "topuzlar",
+  "kind": "product",
+  "width": 1320,
+  "height": 1252,
+  "source": "assets/image-75.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-01.webp",
+  "category": "paslanmaz",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-8.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-02.webp",
+  "category": "paslanmaz",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-10.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-03.webp",
+  "category": "paslanmaz",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-19.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-04.webp",
+  "category": "paslanmaz",
+  "kind": "product",
+  "width": 1039,
+  "height": 1514,
+  "source": "assets/image-23.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-05.webp",
+  "category": "paslanmaz",
+  "kind": "product",
+  "width": 1176,
+  "height": 1338,
+  "source": "assets/image-31.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-06.webp",
+  "category": "paslanmaz",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-48.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-07.webp",
+  "category": "paslanmaz",
+  "kind": "mounting",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-52.jpeg"
+ },
+ {
+  "src": "/images/products/paslanmaz-08.webp",
+  "category": "paslanmaz",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-67.jpeg"
+ },
+ {
+  "src": "/images/products/normal-01.webp",
+  "category": "normal",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-7.jpeg"
+ },
+ {
+  "src": "/images/products/normal-02.webp",
+  "category": "normal",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-18.jpeg"
+ },
+ {
+  "src": "/images/products/normal-03.webp",
+  "category": "normal",
+  "kind": "product",
+  "width": 1045,
+  "height": 1505,
+  "source": "assets/image-37.jpeg"
+ },
+ {
+  "src": "/images/products/normal-04.webp",
+  "category": "normal",
+  "kind": "product",
+  "width": 1254,
+  "height": 1254,
+  "source": "assets/image-60.jpeg"
+ },
+ {
+  "src": "/images/products/normal-05.webp",
+  "category": "normal",
+  "kind": "product",
+  "width": 1320,
+  "height": 857,
+  "source": "assets/image-68.jpeg"
+ },
+ {
+  "src": "/images/products/normal-06.webp",
+  "category": "normal",
+  "kind": "product",
+  "width": 1320,
+  "height": 1168,
+  "source": "assets/image-74.jpeg"
+ },
+ {
+  "src": "/images/products/t-kulplar-01.webp",
+  "category": "t-kulplar",
+  "kind": "product",
+  "width": 1536,
+  "height": 864,
+  "source": "assets/image-61.jpeg"
+ },
+ {
+  "src": "/images/products/sehpa-01.webp",
+  "category": "sehpa",
+  "kind": "application",
+  "width": 864,
+  "height": 1536,
+  "source": "assets/image-0.jpeg"
+ },
+ {
+  "src": "/images/products/sehpa-02.webp",
+  "category": "sehpa",
+  "kind": "product",
+  "width": 1086,
+  "height": 1448,
+  "source": "assets/image-22.jpeg"
+ },
+ {
+  "src": "/images/products/sehpa-03.webp",
+  "category": "sehpa",
+  "kind": "application",
+  "width": 864,
+  "height": 1536,
+  "source": "assets/image-24.jpeg"
+ },
+ {
+  "src": "/images/products/sehpa-04.webp",
+  "category": "sehpa",
+  "kind": "product",
+  "width": 1086,
+  "height": 1448,
+  "source": "assets/image-57.jpeg"
+ },
+ {
+  "src": "/images/products/sehpa-05.webp",
+  "category": "sehpa",
+  "kind": "application",
+  "width": 864,
+  "height": 1536,
+  "source": "assets/image-65.jpeg"
+ }
+]

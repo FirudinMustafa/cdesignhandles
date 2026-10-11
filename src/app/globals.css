@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0e0d0c;
+  --color-ink-2: #171513;
+  --color-ink-3: #211e1b;
+  --color-ivory: #f5f0e8;
+  --color-sand: #ebe3d6;
+  --color-stone: #8b8378;
+  --color-umber: #2a2621;
+  --color-gold: #c5a979;
+  --color-gold-light: #e2cfa8;
+  --color-gold-dark: #9a7f55;
+  --color-line-dark: #2e2a26;
+  --color-line-light: #d9cfbf;
+
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-cormorant);
+
+  --ease-elegant: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-umber);
+}
+
+/* Cormorant varsayılan olarak eski usul rakam kullanıyor ("1971" → "I97I" gibi görünüyor) */
+.font-display,
+.display {
+  font-variant-numeric: lining-nums;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[84rem] px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.32em];
+  }
+
+  .display {
+    @apply font-display font-light leading-[1.02] tracking-[-0.01em];
+  }
+
+  .display em {
+    @apply italic text-gold;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 px-7 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.22em] transition duration-500;
+    transition-timing-function: var(--ease-elegant);
+  }
+
+  /* Kullanım: className="btn btn-gold" */
+  .btn-gold {
+    @apply bg-gold text-ink hover:bg-gold-light;
+  }
+
+  .btn-ghost-light {
+    @apply border border-ivory/30 text-ivory hover:border-gold hover:text-gold;
+  }
+
+  .btn-ghost-dark {
+    @apply border border-umber/25 text-umber hover:border-umber hover:bg-umber hover:text-ivory;
+  }
+
+  .link-line {
+    @apply relative inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.22em];
+  }
+
+  .link-line::after {
+    content: "";
+    @apply absolute -bottom-1.5 left-0 h-px w-full origin-left bg-current transition-transform duration-500;
+    transform: scaleX(0.35);
+    transition-timing-function: var(--ease-elegant);
+  }
+
+  .link-line:hover::after {
+    transform: scaleX(1);
+  }
+
+  .field {
+    @apply w-full border-0 border-b border-line-light bg-transparent px-0 py-3 text-[0.95rem] text-umber outline-none transition placeholder:text-stone/70 focus:border-gold;
+  }
+
+  .img-zoom {
+    @apply transition-transform duration-[1400ms];
+    transition-timing-function: var(--ease-elegant);
+  }
+
+  .group:hover .img-zoom {
+    transform: scale(1.045);
+  }
+}
+
+/* Kaydırınca beliren içerik (Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 1.1s var(--ease-elegant),
+    transform 1.1s var(--ease-elegant);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero: açılışta yazı satırları ve görsel yavaşça belirir */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+}
+
+@keyframes unveil {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: scale(1.08);
+  }
+}
+
+.hero-rise {
+  animation: rise 1.4s var(--ease-elegant) both;
+  animation-delay: var(--d, 0s);
+}
+
+.hero-unveil {
+  animation: unveil 1.8s var(--ease-elegant) both;
+}
+
+/* Kayan ürün grubu şeridi */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .hero-rise,
+  .hero-unveil,
+  .marquee {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+  }
+}
+
+dialog::backdrop {
+  background: rgb(14 13 12 / 0.92);
+  backdrop-filter: blur(4px);
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
