@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { href, type Dictionary, type Locale } from "@/lib/i18n";
 import { company } from "@/lib/site";
+import { BackToTop } from "./BackToTop";
 
 export function Footer({ locale, t }: { locale: Locale; t: Dictionary }) {
   const pages = [
@@ -61,9 +62,7 @@ export function Footer({ locale, t }: { locale: Locale; t: Dictionary }) {
           <p>
             © {new Date().getFullYear()} {company.name}. {t.footer.rights} {t.footer.maker}
           </p>
-          <a href="#top" className="link-line text-ivory/60 hover:text-gold">
-            {t.footer.top}
-          </a>
+          <BackToTop label={t.footer.top} />
         </div>
       </div>
     </footer>

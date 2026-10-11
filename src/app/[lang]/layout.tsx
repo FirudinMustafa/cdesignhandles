@@ -41,8 +41,10 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
   const t = getDictionary(lang);
 
   return (
-    <html lang={lang} className={`${cormorant.variable} ${manrope.variable} antialiased`}>
-      <body id="top" className="flex min-h-screen flex-col font-sans">
+    // data-scroll-behavior: CSS'teki smooth kaydırma sayfa geçişlerinde kapatılsın; yoksa yeni sayfa
+    // yukarı kaydırılırken yarıda kalıyor ve footer'daki linkler sayfayı altta açıyor (Next 16 değişikliği)
+    <html lang={lang} data-scroll-behavior="smooth" className={`${cormorant.variable} ${manrope.variable} antialiased`}>
+      <body className="flex min-h-screen flex-col font-sans">
         <Header locale={lang} t={t.nav} />
         <main className="flex-1">{children}</main>
         <Footer locale={lang} t={t} />
